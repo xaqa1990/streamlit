@@ -13,7 +13,7 @@ st.title("Welcome to my first app!")
 # Write text
 st.text("I can write text here!")
 a,b,c = 1,2,3
-st.text(f"The variables are a = {a:<2.2f}, b = {b:< 2.1f}, {c = }")
+st.text(f"The variables are a = {a:<2.2f}, b = {b:< 2.1f}")
 st.write("I'm writing text using a different method!")
 st.success("I'm writing text using a different method!")
 
