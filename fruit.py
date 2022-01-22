@@ -69,6 +69,6 @@ st.pyplot(fig)
 
 
 fig, ax = plt.subplots()
-ax.pie(amount_list, labels = selected_fruit)
+ax.pie(amount_list, labels = selected_fruit, autopct='%.1f%%')
 
 st.pyplot(fig)
