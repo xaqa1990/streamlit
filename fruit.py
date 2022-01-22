@@ -15,25 +15,28 @@ selected_fruit.sort()
 
 
 # Generate the sliders for fruit prices
-apple_value = st.sidebar.slider("Apple_price",0.00,10.00)
-banana_value = st.sidebar.slider("Banana_price",0.00,10.00)
-orange_value = st.sidebar.slider("Orange_price",0.00,10.00)
-pear_value = st.sidebar.slider("Pear_price",0.00,10.00)
-st.title(f'Fruit Price {pear_value}')
-st.write(f"The price is for {pear_value}")
+
+
+
+
+st.title(f'Fruit Price')
 # Generate a list of prices for selected fruit
 price_list = []
 
 if "Apple" in selected_fruit:
+    apple_value = st.sidebar.slider("Apple_price",0.00,10.00)
     price_list.append(apple_value)
 
 if "Banana" in selected_fruit:
+    banana_value = st.sidebar.slider("Banana_price",0.00,10.00)
     price_list.append(banana_value)
 
 if "Orange" in selected_fruit:
+    orange_value = st.sidebar.slider("Orange_price",0.00,10.00)
     price_list.append(orange_value)
 
 if "Pear" in selected_fruit:
+    pear_value = st.sidebar.slider("Pear_price",0.00,10.00)
     price_list.append(pear_value)
 
 
@@ -49,4 +52,10 @@ fig, ax = plt.subplots()
 ax.bar(selected_fruit,price_list, color = selected_color)
 ax.set_xlabel("Fruits")
 ax.set_ylabel("Price")
+st.pyplot(fig)
+
+
+fig, ax = plt.subplots()
+ax.pie(price_list, labels = selected_fruit)
+
 st.pyplot(fig)
