@@ -19,25 +19,38 @@ selected_fruit.sort()
 
 
 
-st.title(f'Fruit Price')
+st.title(f'Fruit Price and amount')
 # Generate a list of prices for selected fruit
 price_list = []
+amount_list = []
 
 if "Apple" in selected_fruit:
     apple_value = st.sidebar.slider("Apple_price",0.00,10.00)
     price_list.append(apple_value)
+    
+    apple_amount = st.sidebar.slider("How many apples you need?",0,20)
+    amount_list.append(apple_amount)
 
 if "Banana" in selected_fruit:
     banana_value = st.sidebar.slider("Banana_price",0.00,10.00)
     price_list.append(banana_value)
+    
+    banana_amount = st.sidebar.slider("How many bananas you need?",0,20)
+    amount_list.append(banana_amount)
 
 if "Orange" in selected_fruit:
     orange_value = st.sidebar.slider("Orange_price",0.00,10.00)
     price_list.append(orange_value)
+    
+    orange_amount = st.sidebar.slider("How many oranges you need?",0,20)
+    amount_list.append(orange_amount)
 
 if "Pear" in selected_fruit:
     pear_value = st.sidebar.slider("Pear_price",0.00,10.00)
     price_list.append(pear_value)
+    
+    pear_amount = st.sidebar.slider("How many pears you need?",0,20)
+    amount_list.append(pear_amount)
 
 
 # Select the color for the bar chart
@@ -56,6 +69,6 @@ st.pyplot(fig)
 
 
 fig, ax = plt.subplots()
-ax.pie(price_list, labels = selected_fruit)
+ax.pie(amount_list, labels = selected_fruit)
 
 st.pyplot(fig)
