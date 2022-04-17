@@ -44,7 +44,7 @@ if chart == "Fruit Price Bar Chart":
     else:
         # Select the color for the bar chart
         colors = ["Orange", "Blue", "Yellow", "Green"]
-        selected_color = st.sidebar.radio('Color:', colors)
+        selected_color = st.sidebar.radio('Please select the color for your bar chart:', colors)
         
         fig, ax = plt.subplots()
         ax.bar(selected_fruit,fruit_price_list, color = selected_color)
