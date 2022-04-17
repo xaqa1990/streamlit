@@ -34,10 +34,6 @@ for sf in selected_fruit:
     fruit_amount_list.append(fruit_amount)
 
 
-# Select the color for the bar chart
-colors = ["Orange", "Blue", "Yellow", "Green"]
-selected_color = st.sidebar.radio('Color:', colors)
-
 # Select from the fruit price bar chart and fruit amount pie chart
 chart = st.sidebar.selectbox("Would you like to view the bar chart of fruit price or the pie chart of fruit amount?", ["", "Fruit Price Bar Chart", "Fruit Amount Pie Chart"])
 
@@ -46,6 +42,10 @@ if chart == "Fruit Price Bar Chart":
     if sum(fruit_price_list) == 0:
         st.write("Please adjust the fruit price first.")
     else:
+        # Select the color for the bar chart
+        colors = ["Orange", "Blue", "Yellow", "Green"]
+        selected_color = st.sidebar.radio('Color:', colors)
+        
         fig, ax = plt.subplots()
         ax.bar(selected_fruit,fruit_price_list, color = selected_color)
         ax.set_xlabel("Fruits")
