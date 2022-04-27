@@ -14,7 +14,6 @@ category_list = []
 for c in df_bos.Category:
     if c.lower().strip() not in category_list:
         category_list.append(c.lower().strip())
-st.write(category_list)
 
 sub_df_list = []
 
