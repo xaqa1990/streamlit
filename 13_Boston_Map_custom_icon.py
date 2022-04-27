@@ -35,7 +35,6 @@ layer_list = []
 
 
 for i in range(len(sub_df_list)):
-    st.write(sub_df_list[i])
     icon_data = {
         "url": URL_list[i],
         "width": 100,
