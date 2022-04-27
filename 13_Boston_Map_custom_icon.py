@@ -23,7 +23,7 @@ category_list = []
 for c in df_bos.Category:
     if c.lower().strip() not in category_list:
         category_list.append(c.lower().strip())
-st.write(category_list)
+
 
 sub_df_list = []
 
@@ -32,7 +32,7 @@ for c in category_list:
     sub_df_list.append(sub_df)
 
 layer_list = []
-st.write(len(sub_df_list))
+
 
 for i in range(len(sub_df_list)):
     st.write(sub_df_list[i])
