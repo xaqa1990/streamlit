@@ -3,6 +3,7 @@ import pydeck as pdk
 import pandas as pd
 import random as rd
 
+st.title("Boston Map with Custom Icons")
 
 df_bos = pd.read_csv("boston.csv")
 
