@@ -3,7 +3,7 @@ import pydeck as pdk
 import pandas as pd
 import random as rd
 
-
+st.title("Boston Map")
 df_bos = pd.read_csv("boston.csv")
 
 df_bos.rename(columns={"Lat":"lat", "Lon": "lon"}, inplace= True)
