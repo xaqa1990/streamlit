@@ -5,3 +5,4 @@ pydeck
 numpy
 google_streetview
 Pillow
+google_streetview.api
