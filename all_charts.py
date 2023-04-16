@@ -54,7 +54,7 @@ st.pyplot()
 
 
 
-df_sales = pd.read_csv(path + 'cars_sales.csv', index_col='Country')
+df_sales = pd.read_csv('cars_sales.csv', index_col='Country')
 print(df_sales)
 
 # Show the bar chart of all sales in Germany using df.plot(kind = "bar"/"barh")
