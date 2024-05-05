@@ -5,6 +5,15 @@ import random as rd
 
 st.title("Boston Map with Custom Icons")
 
+# Write image
+from PIL import Image
+
+# Open your image using Image.open(file_path)
+img = Image.open("Python.png")
+
+# Show your image using st.image()
+st.image(img, width= 150, caption= "Python Icon")
+
 df_bos = pd.read_csv("boston.csv")
 
 df_bos.rename(columns={"Lat":"lat", "Lon": "lon"}, inplace= True)
