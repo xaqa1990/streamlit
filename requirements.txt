@@ -1,6 +1,5 @@
-pydeck
-matplotlib
+pydeck==0.7.1
+matplotlib == 3.5.1
 streamlit
 pandas
 numpy
-PIL
